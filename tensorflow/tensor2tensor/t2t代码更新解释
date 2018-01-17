@@ -1,0 +1,73 @@
+代码更新主要功能
+1.0.12:
+	t2t-datagen.py  	兼容一次生成多个problem的数据
+	wsj_parsing.py		新增代码， 新的数据集
+	modalyties.py		修改SmallImageModality的代码
+	transformer.py		inputs = tf.squeeze(inputs, 2) 改成inputs = common_layers.flatten4d3d(inputs)
+	trainer_utils.py	增加FLAGS: eval_print
+
+1.0.13:
+	t2t_datagen.py		增加并发数据生成，增加lm1b, wiki
+	t2t-make-tf-configs
+	generator_utils.py	Changes to data generators and SubwordTextEncoder... should not break anything.
+	common_layer.py		增加函数global_pool_1d, linear_set_layer, ravanbakhsh_set_layer
+	transformer_alternative_	增加这个文件
+
+1.0.14：
+	yellowfin.py		YellowFinOptimizer.     See [Zhang et. al., 2017](https://arxiv.org/abs/1706.03471)
+	shake_shake.py		这个代码干嘛的来着
+
+	## 增加 Problem base and registry
+	all_problems.py		增加这个代码，把problem的配置放在了这里
+	problem.py			增加这个代码
+	trainer_utils.py	增加worker_memory_fraction, import all_problems
+
+中间很多个tag
+
+1.1.0:
+	t2t-datagen.py, 
+	t2t-trainer.py, 
+	usr_dir.py:			增加user_dir
+	common_attention.py		增加masked_local_attention_1d()
+	long_answer.py		增加long_answer模型 for attacking the wikipedia title -> article dataset.
+	*.py				删掉了多个文件的行参 summaries=summaries (change summary generation to work better in multi-model case.)
+
+1.1.1:
+	增加genetic problem
+	t2t-trainer.py		增加flag.string('generate_data')，实现一条命令完成：数据生成+训练
+	data_genrators/xxx.py	相应的generator函数增加行参：data_dir
+
+1.1.2:
+	data_generator/ xxx.py	部分problem的代码继承了problem.Problem  (problem.py来自data_generator/)
+	models/common_attention.py 	新增masked_local_attention_1d， 形参attention_type
+	models/long_answer.py 	新增文件，模型：long_answer
+	common_layer.py 		allow_defun = False, # This is a global setting. When turned off, no @function.Defun is used.
+							这个主意一下
+	conv-hidden-relu and self-attention.
+	models/common_attention.py 	函数: unmasked_local_attention_1d，功能：adding encoder conv attention. A query block attends to a neighborhood to the left and the right of it. 
+	data_generators/1m1b.py 	新增char-level 1m1b
+
+1.1.3
+	make a generic Text2TextProblem class, use in WMT, move PTB.
+
+1.1.4
+	common_layers.py 		增加 running_global_pool_1d函数
+	common_attention.py 	增加 sliding window attention函数
+							attention这里有很多变化，需要多看看
+	utils/t2t_model.py 		返回的losses 变成了dict
+	data_generators/problem.py 		add an option to truncate long input and target sequences.
+
+1.1.5
+
+
+1.2.1
+	common_layer.py 		added optional memory-efficient vertsions of 
+	utils/metrics.py 		增加edit distance as metric as additional evalutation criteria (edit distance已集成在tf中，tf.edit_distance)
+	decode_from_dataset		又支持decodes from multiple batches了, 涉及了decoding.py, input_fn_builder.py, model_builder.py, trainer_utils.py
+	model/transformer_vae.py 	这个模型
+	utils/model_builder.py 		add a cyclic linear learning rate scheme, play with VAE
+	utils/expert_utils.py		for mix of experts(MoE), remove padding, add summaries and better params. (模型更迭：models/attention_lm_moe.py)
+	utils/data_reader.py 		modify the hacked-up batching scheme to prevent excessively-long shuffle queues. All of this ugly logic will hopefully go away once the Datasets API supports different batch sizes per bucket. (这里的代码可以详细再看看)
+
+1.2.2
+	
