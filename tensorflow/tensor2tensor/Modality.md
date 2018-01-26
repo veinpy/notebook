@@ -3,6 +3,7 @@
 ##### method:
 
 * bottom
+
 ```
 	Transform one shard of input.
 
@@ -11,8 +12,9 @@
 	Returns:
 		A float32 Tensor with shape [batch, p0, p1, body_input_depth]
 ```
-
+--
 *target_bottom
+
 ```
 	Transform one shard of targets.
 
@@ -21,8 +23,9 @@
 	Returns:
 		A float32 Tensor with shape [batch, p0, p1, body_input_depth]
 ```
-
+--
 *top
+
 ```
 	Generate predictions/logits for one shard of output.
 
@@ -35,8 +38,9 @@
 	Returns:
 		A Tensor of class logits.
 ```
-
+--
 *loss
+
 ```
 	Compute loss numerator and denominator for one shard of output
 ```
