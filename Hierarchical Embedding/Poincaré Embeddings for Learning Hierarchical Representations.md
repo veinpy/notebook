@@ -4,6 +4,10 @@
 
 [github](https://github.com/facebookresearch/poincare-embeddings)
 
+The model achieves embedding by defining a loss function that penalizes low distances between unconnected nodes and high distances between connected nodes, and then training over the list of connected nodes, along with randomly sampled negative examples, using gradient descent.
+
+>Embedding nodes into a Euclidean space while accurately preserving the distance between the nodes usually requires a very high number of dimensions.
+
 Embedding methods suffer from a fundamental limitation:
 
 	their ability to model complex patterns is inherently bounded by the dimensinoality of the embedding space.
