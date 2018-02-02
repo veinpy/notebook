@@ -31,10 +31,15 @@
 **Task**
 > reinterpret ILP task as a binary classification problem, and minimise cross-entropy loss with regard to ground-truth boolean labels during training.
 
+> Instead of using Boolean flags to choose a discrete subset of clauses, we now use continuous weights to determine a probability distribution over clauses.
+
 **Major limitation**
 > it requires significant memory resources. 
 
-currently only support predicates of arity 0,1,2. Not support ternary predicates or higher
+> currently only support predicates of arity 0,1,2. Not support ternary predicates or higher
+
+> insist that all clauses have exactly two atoms in the body
+
 
 **4 restriction for generated clauses**
 > 1. rule out clauses that are unsafe (a variable used in the head is not used in the body)
