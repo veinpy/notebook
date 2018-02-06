@@ -80,7 +80,9 @@
 
 > cnR(X)=X∪{γ|γ←γ1,...,γm ∈ground(R), γi ∈X}
 
-> cnR(X)=X∪{α[θ]|α←α1,...,αm ∈R, αi[θ]∈X}**R**
+> cnR(X)=X∪{α[θ]|α←α1,...,αm ∈R, αi[θ]∈X}
+
+**R**
 > a set of clauses
 
 **R |= γ**
@@ -95,19 +97,36 @@
 > (v, int) , where 
 > 
 > 		• v ∈ N specifies the number of existentially quantified variables allowed in the clause
-> > 		• int ∈ {0, 1} specifies whether the atoms in the body of the clause can use intensionalpredicates (int = 1) or only extensional predicates (int = 0)
+> 
+> 		• int ∈ {0, 1} specifies whether the atoms in the body of the clause can use intensional
+predicates (int = 1) or only extensional predicates (int = 0)
 
 **Π**
 > A program template, describes a range of programs that can be generated
 > 
 > (Pa, aritya, rules, T ) , where 
 > 
-> 		• Pa is a set of auxiliary (intensional) predicates; these are the additional invented predicates used to help define the target predicate>>		• aritya is a map Pa → N specifying the arity of each auxiliary predicate>> 		• rules（一对rule template：τ）is a map from each intensional predicate p to a pair of rule templates (τ_p1,τ_p2)>
+> 		• Pa is a set of auxiliary (intensional) predicates; these are the additional invented predicates used to help define the target predicate
+>
+>		• aritya is a map Pa → N specifying the arity of each auxiliary predicate
+>
+> 		• rules（一对rule template：τ）is a map from each intensional predicate p to a pair of rule templates (τ_p1,τ_p2)
+>
 >		• T ∈ N specifies the max number of steps of forward chaining inference
 
 ---
 ##### ILP Problem
-a tuple (B, P, N ) of ground atoms, where:> • B is a set of background assumptions, a set of ground atoms.> • P is a set of positive instances - examples taken from the extension of the target predicate to be learned> • N is a set of negative instances - examples taken outside the extension of the target predicatea **solution** is a set R of definite clauses such that:>• B, R |= γ for all γ ∈ P>• B, R   γ for all γ ∈ N
+a tuple (B, P, N ) of ground atoms, where:
+> • B is a set of background assumptions, a set of ground atoms.
+
+> • P is a set of positive instances - examples taken from the extension of the target predicate to be learned
+
+> • N is a set of negative instances - examples taken outside the extension of the target predicate
+
+a **solution** is a set R of definite clauses such that:
+>• B, R |= γ for all γ ∈ P
+
+>• B, R   γ for all γ ∈ N
 
 for instance:
 > B = {zero(0), succ(0, 1), succ(1, 2), succ(2, 3), ...}
@@ -117,7 +136,12 @@ for instance:
 > N = {even(1), even(3), even(5), even(7), ...}
 > 
 > R:
-> 	>		even(X) ← zero(X)>		even(X) ← even(Y ), succ2(Y, X)>		succ2(X, Y ) ← succ(X, Z), succ(Z, Y )
+> 	
+>		even(X) ← zero(X)
+
+>		even(X) ← even(Y ), succ2(Y, X)
+
+>		succ2(X, Y ) ← succ(X, Z), succ(Z, Y )
 
 **solution** metholody:
 > bottom-up: examining features of examples, extract specific clauses, generalise from clauses.
