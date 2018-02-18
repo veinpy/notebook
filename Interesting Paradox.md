@@ -9,3 +9,8 @@
 > [CNN Is All You Need](https://arxiv.org/abs/1712.09662) **vs.** [Attention is All you need]()
 
 > [Everything that Works Works Because it's Bayesian: Why Deep Nets Generalize?](http://www.inference.vc/everything-that-works-works-because-its-bayesian-2/) **vs.** [The Generalization Mystery: Sharp vs Flat Minima](http://www.inference.vc/sharp-vs-flat-minima-are-still-a-mystery-to-me/)
+> 
+
+### Interesting Stuffs
+
+> [A Survival Guide to a PhD](http://karpathy.github.io/2016/09/07/phd)
