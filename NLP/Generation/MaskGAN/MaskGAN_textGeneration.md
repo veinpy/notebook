@@ -1,5 +1,7 @@
 # Mask GAN: Better Text Generation via Filling In The ___
 
+[paper](pdf/maskGAN.pdf)
+
 ### Contribution
 
 > **sample quality**
@@ -32,6 +34,8 @@
 **seq2seq**
 
 ##### Generator
+Output distribution over the vocabulary size.
+
 ![generator equation](generator_equation.png)
 
 ```m(x) is a mask function for x. ```
