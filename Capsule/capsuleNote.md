@@ -140,3 +140,4 @@ good illustration:
 > xavier initialization
 > bias initialization with truncated normal initializer(0, 0.01)
 > regularization, for instance: L1, L2.
+,
