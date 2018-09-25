@@ -4,3 +4,4 @@ Selection of the activation function is mostly dependent on the problem and natu
 #### Loss Function
 
 Euclidean distance and Hamming distance for forecasting of real-values and cross-entropy over probability distribution of outputs for classification problems.
+
