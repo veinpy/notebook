@@ -1,11 +1,13 @@
 # Latent Alignment and Variational Attention
 
 [paper](https://arxiv.org/abs/1807.03756)
-[github](https://github.com/harvardnlp/var-attn)
+[github\_pytorch](https://github.com/harvardnlp/var-attn)
 
 --
 ### key idea:
 <mark>**evidence lower bound optimization(ELBO)**
+
+<img src="./model_struct.png" alt="model_struct" style="width:250px;"/>
 
 inference network takes in the input, query, and the output, produce parameters of the variational distribution q(z; λ). i.e. λ = enc(x, x_~, y; φ).
 
