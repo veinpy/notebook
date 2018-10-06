@@ -1,6 +1,6 @@
 # Latent Alignment and Variational Attention
 
-[paper](https://arxiv.org/abs/1807.03756)
+[paper](https://arxiv.org/abs/1807.03756)  
 [github\_pytorch](https://github.com/harvardnlp/var-attn)
 
 --
