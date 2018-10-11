@@ -1,7 +1,8 @@
 # backpropagate through random samples
 
 ---
-### score function estimator**/**likelihood ratio estimator**/**REINFORCE
+### score function estimator**/**likelihood ratio estimator**/**REINFORCE  
+*refered from pytorch document*
 
 probability density functin is differentiable with respect to its parameters,  
 使用REINFORCE方法计算loss：   
