@@ -67,7 +67,15 @@ def score(hs, ht, attn_type, attn_dim=None):
 
 + soft attention
 + hard attention
-	+ 依概率Si来采样输入端的隐状态一部分来进行计算
+	+ 依概率Si来采样输入端的隐状态一部分来进行计算  
+
+```python
+## hard attention, sampling 
+if use_prior:  
+  # p_scores are softmax attention value
+  
+```
+
 
 ## Self-Attention
 
