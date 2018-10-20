@@ -32,6 +32,9 @@ result = tf.nn.convolution(lum, filter=kernel, padding='VALID')
 ### Dilated Convolution \[[paper](https://arxiv.org/abs/1511.07122v3)\]
 
 Expanding receptive field without loss of resolution or coverage.  
+Reduce computational cost.  
+```any task which needs upsampling after downsampling when using pooling. 
+Like image segmentation```
 
 <center>
 逐层网络结构  
@@ -42,14 +45,34 @@ Layer1(a)kernel=3*3 | Layer2(b) kernel=3*3 | Layer3(c) kernel=3*3 |
 dilation=1, receptive_field=3*3 | dilation=2, receptive_field=7*7 | dilation=4, receptive_filed=15*15 |
 </center>
 
+**Limitation**  
+becase of keeping the details of data, the cost may be large compared with cost of using pooling.
+
+**Case**  
+
++ WaveNet  
+
+<mark>Image segmentation 的输出保持原始图像大小，这个的实现example写一个</mark>
+
 --
 ### Separable Convolution
+
+
+Used in Xception CNN.
+
+**spatial separable convolution**
+Get the same result, by multiplying with two smaller vectors instead of a vanilla convolution kernel.
+
+**depthwise separable convolution**  
+hypothesis that spatial and depthwise information can be decoupled
 
 --
 ### Deformable Convolution
 
 --
-### Deconvolution
+### Deconvolution  
+
+a deconvolution is another convolution layer, that spaces out the pixels and performs an up sampling
 
 --
 ### Design Criteria  
