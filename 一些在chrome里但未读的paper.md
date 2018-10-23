@@ -56,12 +56,17 @@ Representation](http://www.aclweb.org/anthology/D17-1029)
 
 ### Attention
 + [DYNAMIC COATTENTION NETWORKS FOR QUESTION ANSWERING](https://arxiv.org/pdf/1611.01604v4.pdf)
++ [ABCNN: Attention-Based Convolutional Neural Network](http://www.aclweb.org/anthology/Q16-1019) (low priority)
 
 ### Chatbot
 + [Neural Belief Tracker: Data-Driven Dialogue State Tracking](https://arxiv.org/pdf/1606.03777v2.pdf)
 + [GUS, A Frame-Driven Dia|og System ](https://nlp.stanford.edu/acvogel/gus.pdf)
 + [Speech and Language Processing. 【chapter29】](https://web.stanford.edu/~jurafsky/slp3/29.pdf)
++ [A User Simulator for Task-Completion Dialogues](https://arxiv.org/pdf/1612.05688v3.pdf) ```**借鉴其中的githubs**```
 
 ### ACL 2018 
 [**all accepted paper**](https://acl2018.org/programme/papers/)
-+ 
+
+
+### Recommender
+[ctr预估之DeepMVM](https://zhuanlan.zhihu.com/p/32707673)
