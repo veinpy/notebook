@@ -13,5 +13,7 @@
 <img src="encoder.png" alt="encoder" width="400"/>
 
 ### Decoder  
-zij为latent variable，
+```
+zij为latent variable，  
+```
 <img src="decoder.png" alt="decoder" width="400"/>
