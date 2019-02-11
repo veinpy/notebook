@@ -120,7 +120,9 @@ good illustration:
 > 
 > B: Primary Capsule numbers
 > 
-> 
+
+**Pose Matrix**  
+capsule的姿态 矩阵/向量，通过上一层capsule的pose矩阵乘以视角不变矩阵(W)得到，并进行 加权/投票 得到
 
 **Algorithm**
 ![EM_routing](EM_Routing.png)
