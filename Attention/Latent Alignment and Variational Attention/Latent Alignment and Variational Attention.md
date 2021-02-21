@@ -5,6 +5,9 @@
 
 --
 ### key idea:
+
+将Attention建模成隐变量，可以为decoder提供更clean的feature
+
 <mark>**evidence lower bound optimization(ELBO)**
 
 <img src="./model_struct.png" alt="model_struct" style="width:250px;"/>
