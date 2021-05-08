@@ -127,20 +127,30 @@ classic methods for student structure optimization:
 + NAS-based Distillation
 
 ---
-#### In my mind, 
+#### In my mind 
 
 **Composite Teacher Model**
 
 对于一个系统，单纯的End2End模型并不适用于
 
-**measure the student model's capacity**
+**measure the student model's capacity**  
+参数量对模型能力的影响
+评估参数是冗余的
+评估某个结构是冗余的
 
-**is single loss enough**
+**is single loss enough**  
 multi-bp strategy 是否有前景
 
-**collaborative learning**<font color="blue">[[4]](#[4])</font>
-
+**collaborative learning**<font color="blue">[[4]](#[4])</font>  
 explore diverse knowledge transfer patterns
+
+**dynamic operation routine**  
+NAS不固化operation，而是做一个operation routine
+
+**model fully interpretable**  
+全模型可解释性
+
+
 
 ---
 Reference:  
