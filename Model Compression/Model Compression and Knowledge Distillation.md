@@ -150,6 +150,21 @@ NAS不固化operation，而是做一个operation routine
 **model fully interpretable**  
 全模型可解释性
 
+**how to utilize well-trained module**
+use in NAS
+use in sub-tasks
+
+**two leaarning loop in NAS**
+1，merge two loop into one
+2, add 3rd lopp
+
+architecture encoding and decoding.
+
+计算消耗优化（如何高效快速的实现满足结构评估所需要的weights的学习）：
+	a. beam search with fixed random initialize weights
+	b. measure the satisfied weights updates
+	c. inner-training into local optimum
+
 
 
 ---
