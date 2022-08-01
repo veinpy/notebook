@@ -4,6 +4,12 @@
 + causality
 + learning to learn
 
+# Definision
+
+```latex
+L(F) = \sum_{n=1}^{N} l^n
+```
+
 ## mainly methods
 + recurrent models
 + metric learning
